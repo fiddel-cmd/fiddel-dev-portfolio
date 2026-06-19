@@ -23,51 +23,51 @@
    ============================================ */
 #mainNav {
     background: rgba(255, 255, 255, 0.95);
-    -webkit-backdrop-filter: blur(10px);  /* For Safari */
-    backdrop-filter: blur(10px);           /* For modern browsers */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-speed) ease;
+    padding: 1rem 0;
 }
 
-#mainNav .navbar-brand {
-    font-family: var(--heading-font);
-    font-size: 1.5rem;
-    color: var(--dark-color);
-    letter-spacing: 2px;
-    transition: color 0.3s ease;
+/* ✅ FIX: Style the hamburger menu icon */
+.navbar-toggler {
+    border: 2px solid var(--dark-color) !important;
+    padding: 0.5rem 0.75rem;
+    transition: all var(--transition-speed) ease;
 }
 
-#mainNav .navbar-brand i {
-    color: var(--primary-color);
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%230F172A' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    transition: all var(--transition-speed) ease;
 }
 
-#mainNav .navbar-nav .nav-link {
-    font-family: var(--body-font);
-    font-weight: 500;
-    color: var(--text-color);
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
-    position: relative;
+/* ✅ FIX: Dark mode hamburger menu - WHITE strips */
+body.dark-mode .navbar-toggler {
+    border-color: #FFFFFF !important;
 }
 
-#mainNav .navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
+body.dark-mode .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FFFFFF' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* ✅ Optional: Hover effect for toggler */
+.navbar-toggler:hover {
     background: var(--primary-color);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
+    border-color: var(--primary-color) !important;
 }
 
-#mainNav .navbar-nav .nav-link:hover::after,
-#mainNav .navbar-nav .nav-link.active::after {
-    width: 60%;
+.navbar-toggler:hover .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FFFFFF' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
-#mainNav .navbar-nav .nav-link:hover,
-#mainNav .navbar-nav .nav-link.active {
-    color: var(--primary-color);
+body.dark-mode .navbar-toggler:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color) !important;
+}
+
+body.dark-mode .navbar-toggler:hover .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FFFFFF' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 /* Hire Button */
@@ -169,5 +169,272 @@ body.dark-mode #mainNav .navbar-nav .nav-link.active {
     
     .hire-btn {
         margin-top: 0.5rem;
+    }
+}
+/* ============================================
+   Hero Section Styles
+   ============================================ */
+.hero-section {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Grid background pattern */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+}
+
+/* Glowing orb effect */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.15), transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-family: var(--heading-font);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title .highlight {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-family: var(--body-font);
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    max-width: 550px;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons .btn-primary {
+    background: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.hero-buttons .btn-primary:hover {
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+}
+
+.hero-buttons .btn-outline-primary {
+    color: #FFFFFF;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.hero-buttons .btn-outline-primary:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+    color: white;
+}
+
+/* Hero Stats */
+.hero-stats .stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 0.2rem;
+}
+
+.stat-label {
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0;
+}
+
+/* Hero Illustration */
+.hero-image {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-illustration {
+    position: relative;
+    display: inline-block;
+    padding: 2rem;
+}
+
+.hero-illustration i {
+    font-size: 12rem;
+    color: var(--primary-color);
+    opacity: 0.8;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.floating-icon {
+    position: absolute;
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    opacity: 0.6;
+}
+
+.icon-1 {
+    top: 10%;
+    right: 5%;
+    animation: float 4s ease-in-out infinite;
+}
+
+.icon-2 {
+    bottom: 20%;
+    left: 0;
+    animation: float 5s ease-in-out infinite 1s;
+}
+
+.icon-3 {
+    top: 50%;
+    right: -10%;
+    animation: float 4.5s ease-in-out infinite 0.5s;
+}
+
+/* Wave Divider */
+.wave-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.wave-divider svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* ============================================
+   Dark Mode - Hero Section
+   ============================================ */
+body.dark-mode .hero-section {
+    background: linear-gradient(135deg, #020617 0%, #0F172A 50%, #020617 100%);
+}
+
+body.dark-mode .wave-divider svg path {
+    fill: #0F172A;
+}
+
+/* ============================================
+   Mobile Responsiveness
+   ============================================ */
+@media (max-width: 991.98px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-illustration i {
+        font-size: 8rem;
+    }
+    
+    .hero-image {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.8rem;
+    }
+    
+    .hero-buttons .btn-lg {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+    
+    .hero-buttons .btn-outline-primary {
+        margin-left: 0 !important;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .hero-illustration i {
+        font-size: 5rem;
+    }
+    
+    .floating-icon {
+        font-size: 1.5rem;
     }
 }
