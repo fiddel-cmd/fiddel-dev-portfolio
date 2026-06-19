@@ -23,9 +23,8 @@
    ============================================ */
 #mainNav {
     background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    -webkit-backdrop-filter: blur(10px);  /* For Safari */
+    backdrop-filter: blur(10px);           /* For modern browsers */
 }
 
 #mainNav .navbar-brand {
@@ -120,6 +119,7 @@ body.dark-mode {
 
 body.dark-mode #mainNav {
     background: rgba(15, 23, 42, 0.95);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
