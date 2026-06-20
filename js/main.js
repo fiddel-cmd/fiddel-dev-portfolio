@@ -61,3 +61,24 @@ window.addEventListener('scroll', function() {
     
     lastScroll = currentScroll;
 });
+    // ==========================================
+    // 5. SCROLL TO TOP BUTTON
+    // ==========================================
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    
+    if (scrollBtn) {
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+        
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
