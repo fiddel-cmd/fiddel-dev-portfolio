@@ -864,6 +864,7 @@ body.dark-mode .contact-social a {
     text-align: center;
 }
 
+
 .page-title {
     font-family: var(--heading-font);
     font-size: 3rem;
@@ -962,3 +963,8 @@ body.dark-mode .contact-social a {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
 }
+/* Skill Progress Bars - No Inline Styles */
+.skill-90 { width: 90%; }
+.skill-85 { width: 85%; }
+.skill-80 { width: 80%; }
+.skill-75 { width: 75%; }
