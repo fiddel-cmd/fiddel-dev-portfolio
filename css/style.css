@@ -1215,3 +1215,330 @@ body.dark-mode .footer-bottom {
         font-size: 0.8rem;
     }
 }
+/* ============================================
+   Services Page Styles
+   ============================================ */
+
+/* Page Header */
+.services-header {
+    padding-top: 120px;
+    padding-bottom: 3rem;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(37, 99, 235, 0.03) 0%, transparent 100%);
+}
+
+.services-header .badge {
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+    border: 1px solid rgba(37, 99, 235, 0.15);
+}
+
+/* Service Icon */
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(37, 99, 235, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: 2px solid rgba(37, 99, 235, 0.1);
+}
+
+.service-icon:hover {
+    background: var(--primary-color);
+    color: #FFFFFF;
+    transform: scale(1.1) rotate(8deg);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+}
+
+/* Service Detail Rows */
+.service-detail-row {
+    padding: 2.5rem 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.service-detail-row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.service-detail-row:hover .service-icon {
+    transform: scale(1.05);
+}
+
+.service-detail-row h3 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+}
+
+.service-detail-row h3 i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.service-detail-row p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.service-detail-row p strong {
+    color: var(--text-color);
+}
+
+/* Service Badges */
+.service-detail-row .badge {
+    font-weight: 500;
+    padding: 0.4rem 0.9rem;
+    border-radius: 50px;
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--primary-color);
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    font-size: 0.78rem;
+    transition: all 0.3s ease;
+}
+
+.service-detail-row .badge:hover {
+    background: var(--primary-color);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 4rem 0;
+    text-align: center;
+    background: rgba(37, 99, 235, 0.04);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cta-section h3 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 2rem;
+}
+
+.cta-section p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 0 auto 1.5rem;
+}
+
+.cta-section .btn-primary {
+    padding: 0.8rem 2.5rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.cta-section .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+}
+
+/* ============================================
+   Dark Mode - Services Page
+   ============================================ */
+body.dark-mode .services-header {
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.05) 0%, transparent 100%);
+}
+
+body.dark-mode .services-header .badge {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60A5FA;
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+body.dark-mode .service-icon {
+    background: rgba(59, 130, 246, 0.12);
+    color: #60A5FA;
+    border-color: rgba(59, 130, 246, 0.15);
+}
+
+body.dark-mode .service-icon:hover {
+    background: #3B82F6;
+    color: #FFFFFF;
+    border-color: #3B82F6;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
+
+body.dark-mode .service-detail-row {
+    border-bottom-color: #334155;
+}
+
+body.dark-mode .service-detail-row h3 {
+    color: #F1F5F9;
+}
+
+body.dark-mode .service-detail-row p {
+    color: #94A3B8;
+}
+
+body.dark-mode .service-detail-row p strong {
+    color: #E2E8F0;
+}
+
+body.dark-mode .service-detail-row .badge {
+    background: rgba(59, 130, 246, 0.12);
+    color: #60A5FA;
+    border-color: rgba(59, 130, 246, 0.15);
+}
+
+body.dark-mode .service-detail-row .badge:hover {
+    background: #3B82F6;
+    color: #FFFFFF;
+}
+
+body.dark-mode .cta-section {
+    background: rgba(59, 130, 246, 0.05);
+    border-color: #334155;
+}
+
+body.dark-mode .cta-section h3 {
+    color: #F1F5F9;
+}
+
+body.dark-mode .cta-section p {
+    color: #94A3B8;
+}
+
+/* ============================================
+   Responsive - Services Page
+   ============================================ */
+@media (max-width: 991.98px) {
+    .services-header {
+        padding-top: 100px;
+        padding-bottom: 2rem;
+    }
+    
+    .service-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 1.8rem;
+    }
+    
+    .service-detail-row {
+        padding: 1.5rem 0;
+    }
+    
+    .service-detail-row h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .services-header {
+        padding-top: 90px;
+        padding-bottom: 1.5rem;
+    }
+    
+    .services-header h1 {
+        font-size: 2rem;
+    }
+    
+    .services-header .section-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .service-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .service-detail-row {
+        padding: 1.2rem 0;
+        text-align: center;
+    }
+    
+    .service-detail-row h3 {
+        font-size: 1.2rem;
+    }
+    
+    .service-detail-row p {
+        font-size: 0.95rem;
+    }
+    
+    .service-detail-row .d-flex {
+        justify-content: center;
+    }
+    
+    .service-detail-row .badge {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.7rem;
+    }
+    
+    .cta-section {
+        padding: 3rem 0;
+    }
+    
+    .cta-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .cta-section p {
+        font-size: 0.95rem;
+    }
+    
+    .cta-section .btn-primary {
+        padding: 0.6rem 2rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .services-header {
+        padding-top: 80px;
+        padding-bottom: 1rem;
+    }
+    
+    .services-header h1 {
+        font-size: 1.7rem;
+    }
+    
+    .service-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+    
+    .service-detail-row {
+        padding: 1rem 0;
+    }
+    
+    .service-detail-row h3 {
+        font-size: 1rem;
+    }
+    
+    .service-detail-row p {
+        font-size: 0.9rem;
+    }
+    
+    .service-detail-row .badge {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.6rem;
+    }
+    
+    .cta-section h3 {
+        font-size: 1.3rem;
+    }
+}
