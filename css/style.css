@@ -1000,18 +1000,81 @@ body.dark-mode .contact-social a {
 .skill-65 { width: 65%; }
 
 /* ============================================
-   Dark Mode - About & Skills
+   Dark Mode - Complete
    ============================================ */
+body.dark-mode {
+    background-color: #0F172A;
+    color: #F1F5F9;
+}
+
+/* Navigation */
+body.dark-mode #mainNav {
+    background: rgba(15, 23, 42, 0.95);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #334155;
+}
+
+body.dark-mode #mainNav .navbar-brand {
+    color: #F1F5F9;
+}
+
+body.dark-mode #mainNav .navbar-nav .nav-link {
+    color: #94A3B8;
+}
+
+body.dark-mode #mainNav .navbar-nav .nav-link:hover,
+body.dark-mode #mainNav .navbar-nav .nav-link.active {
+    color: #3B82F6;
+}
+
+/* Theme Toggle */
+body.dark-mode #themeToggle {
+    border-color: #334155;
+    color: #F1F5F9;
+}
+
+body.dark-mode #themeToggle:hover {
+    background: #3B82F6;
+    color: #FFFFFF;
+    border-color: #3B82F6;
+}
+
+/* Hero Section */
+body.dark-mode .hero-section {
+    background: linear-gradient(135deg, #020617 0%, #0F172A 50%, #020617 100%);
+}
+
+body.dark-mode .wave-divider svg path {
+    fill: #0F172A;
+}
+
+/* About Section - FIX for text visibility */
+body.dark-mode .about-section .lead {
+    color: #E2E8F0;
+}
+
+body.dark-mode .about-section p {
+    color: #CBD5E1;
+}
+
 body.dark-mode .about-list li {
+    color: #E2E8F0;
+}
+
+body.dark-mode .about-list i {
+    color: #60A5FA !important;
+}
+
+body.dark-mode .section-title {
     color: #F1F5F9;
 }
 
-body.dark-mode .floating-badge {
-    background: #1E293B;
-    color: #F1F5F9;
-    border: 1px solid #334155;
+body.dark-mode .section-subtitle {
+    color: #94A3B8;
 }
 
+/* Skills */
 body.dark-mode .skill-card {
     background: #1E293B;
     border-color: #334155;
@@ -1037,6 +1100,34 @@ body.dark-mode .skill-card .progress {
 body.dark-mode .skill-card .progress-bar {
     background: #3B82F6;
     color: #FFFFFF;
+}
+
+/* Floating Badges */
+body.dark-mode .floating-badge {
+    background: #1E293B;
+    color: #F1F5F9;
+    border: 1px solid #334155;
+}
+
+/* Buttons */
+body.dark-mode .btn-outline-primary {
+    color: #F1F5F9;
+    border-color: #334155;
+}
+
+body.dark-mode .btn-outline-primary:hover {
+    background: #3B82F6;
+    border-color: #3B82F6;
+    color: #FFFFFF;
+}
+
+/* Footer */
+body.dark-mode .footer-section {
+    background: #020617;
+}
+
+body.dark-mode .footer-bottom {
+    border-top-color: #334155;
 }
 
 /* ============================================
