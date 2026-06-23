@@ -17,7 +17,11 @@
     --heading-font: 'Poppins', sans-serif;
     --body-font: 'Inter', sans-serif;
 }
-
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 /* ============================================
    Navigation Styles
    ============================================ */
@@ -1216,10 +1220,10 @@ body.dark-mode .footer-bottom {
     }
 }
 /* ============================================
-   Services Page Styles
+   Services Page - Complete Fix
    ============================================ */
 
-/* Page Header */
+/* Services Header - Fix for the page header */
 .services-header {
     padding-top: 120px;
     padding-bottom: 3rem;
@@ -1237,7 +1241,7 @@ body.dark-mode .footer-bottom {
     border: 1px solid rgba(37, 99, 235, 0.15);
 }
 
-/* Service Icon */
+/* Service Icon - Make sure this is defined */
 .service-icon {
     width: 80px;
     height: 80px;
@@ -1273,21 +1277,12 @@ body.dark-mode .footer-bottom {
     margin-bottom: 0;
 }
 
-.service-detail-row:hover .service-icon {
-    transform: scale(1.05);
-}
-
 .service-detail-row h3 {
     font-family: var(--heading-font);
     font-weight: 700;
     color: var(--text-color);
     margin-bottom: 0.8rem;
     font-size: 1.5rem;
-}
-
-.service-detail-row h3 i {
-    color: var(--primary-color);
-    margin-right: 0.5rem;
 }
 
 .service-detail-row p {
@@ -1300,7 +1295,6 @@ body.dark-mode .footer-bottom {
     color: var(--text-color);
 }
 
-/* Service Badges */
 .service-detail-row .badge {
     font-weight: 500;
     padding: 0.4rem 0.9rem;
@@ -1355,7 +1349,7 @@ body.dark-mode .footer-bottom {
 }
 
 /* ============================================
-   Dark Mode - Services Page
+   Dark Mode - Services Page (Enhanced)
    ============================================ */
 body.dark-mode .services-header {
     background: linear-gradient(180deg, rgba(59, 130, 246, 0.05) 0%, transparent 100%);
@@ -1420,6 +1414,17 @@ body.dark-mode .cta-section p {
     color: #94A3B8;
 }
 
+body.dark-mode .cta-section .btn-primary {
+    background: #3B82F6;
+    border-color: #3B82F6;
+}
+
+body.dark-mode .cta-section .btn-primary:hover {
+    background: #2563EB;
+    border-color: #2563EB;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
+
 /* ============================================
    Responsive - Services Page
    ============================================ */
@@ -1452,10 +1457,6 @@ body.dark-mode .cta-section p {
     
     .services-header h1 {
         font-size: 2rem;
-    }
-    
-    .services-header .section-subtitle {
-        font-size: 0.95rem;
     }
     
     .service-icon {
