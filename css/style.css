@@ -30,7 +30,7 @@
     padding: 1rem 0;
 }
 
-/* ✅ FIX: Style the hamburger menu icon */
+/*  FIX: Style the hamburger menu icon */
 .navbar-toggler {
     border: 2px solid var(--dark-color) !important;
     padding: 0.5rem 0.75rem;
@@ -42,7 +42,7 @@
     transition: all var(--transition-speed) ease;
 }
 
-/* ✅ FIX: Dark mode hamburger menu - WHITE strips */
+/* FIX: Dark mode hamburger menu - WHITE strips */
 body.dark-mode .navbar-toggler {
     border-color: #FFFFFF !important;
 }
@@ -51,7 +51,7 @@ body.dark-mode .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FFFFFF' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
-/* ✅ Optional: Hover effect for toggler */
+/* Optional: Hover effect for toggler */
 .navbar-toggler:hover {
     background: var(--primary-color);
     border-color: var(--primary-color) !important;
@@ -858,12 +858,17 @@ body.dark-mode .contact-social a {
     }
 }
 /* About Page Styles */
+/* ============================================
+   About Page Styles
+   ============================================ */
+
+/* Page Hero */
 .page-hero {
     background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
     padding: 8rem 0 4rem;
     text-align: center;
+    margin-top: 0;
 }
-
 
 .page-title {
     font-family: var(--heading-font);
@@ -877,6 +882,7 @@ body.dark-mode .contact-social a {
     color: rgba(255, 255, 255, 0.8);
 }
 
+/* About List */
 .about-list {
     list-style: none;
     padding: 0;
@@ -885,12 +891,14 @@ body.dark-mode .contact-social a {
 .about-list li {
     padding: 0.4rem 0;
     font-size: 1rem;
+    color: var(--text-color);
 }
 
 .about-list i {
     margin-right: 0.5rem;
 }
 
+/* About Image Placeholder */
 .about-image-placeholder {
     background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(6, 182, 212, 0.1));
     border-radius: 1rem;
@@ -925,46 +933,194 @@ body.dark-mode .contact-social a {
     animation: float 5s ease-in-out infinite 1s;
 }
 
+/* ============================================
+   Skills Section
+   ============================================ */
 .skill-card {
     background: var(--light-color);
-    padding: 1.5rem;
+    padding: 1.8rem 1.2rem;
     border-radius: 1rem;
     text-align: center;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    height: 100%;
+    margin-bottom: 1.5rem;
 }
 
 .skill-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
 }
 
 .skill-card i {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover i {
+    transform: scale(1.1);
+}
+
+.skill-card h5 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-family: var(--heading-font);
+    font-size: 1rem;
 }
 
 .skill-card .progress {
     height: 8px;
     border-radius: 50px;
     background: var(--border-color);
+    overflow: hidden;
 }
 
 .skill-card .progress-bar {
-    background: var(--primary-color);
     border-radius: 50px;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 600;
     line-height: 8px;
+    color: #FFFFFF;
+    background: var(--primary-color);
+    transition: width 1.2s ease;
+    padding-top: 1px;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-}
-/* Skill Progress Bars - No Inline Styles */
+/* Skill width classes */
 .skill-90 { width: 90%; }
 .skill-85 { width: 85%; }
 .skill-80 { width: 80%; }
 .skill-75 { width: 75%; }
+.skill-70 { width: 70%; }
+.skill-65 { width: 65%; }
+
+/* ============================================
+   Dark Mode - About & Skills
+   ============================================ */
+body.dark-mode .about-list li {
+    color: #F1F5F9;
+}
+
+body.dark-mode .floating-badge {
+    background: #1E293B;
+    color: #F1F5F9;
+    border: 1px solid #334155;
+}
+
+body.dark-mode .skill-card {
+    background: #1E293B;
+    border-color: #334155;
+}
+
+body.dark-mode .skill-card:hover {
+    border-color: #3B82F6;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+}
+
+body.dark-mode .skill-card h5 {
+    color: #F1F5F9;
+}
+
+body.dark-mode .skill-card i {
+    color: #60A5FA;
+}
+
+body.dark-mode .skill-card .progress {
+    background: #334155;
+}
+
+body.dark-mode .skill-card .progress-bar {
+    background: #3B82F6;
+    color: #FFFFFF;
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* ============================================
+   Responsive - About & Skills
+   ============================================ */
+@media (max-width: 991.98px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .about-image-placeholder {
+        min-height: 300px;
+        padding: 3rem 1.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+    }
+    
+    .about-image-placeholder {
+        min-height: 250px;
+        padding: 2rem 1rem;
+    }
+    
+    .floating-badge {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    .skill-card {
+        padding: 1.2rem 0.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .skill-card i {
+        font-size: 1.8rem;
+    }
+    
+    .skill-card h5 {
+        font-size: 0.9rem;
+    }
+    
+    .skill-card .progress {
+        height: 6px;
+    }
+    
+    .skill-card .progress-bar {
+        font-size: 0.5rem;
+        line-height: 6px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .page-hero {
+        padding: 6rem 0 3rem;
+    }
+    
+    .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .skill-card {
+        padding: 1rem 0.6rem;
+    }
+    
+    .skill-card i {
+        font-size: 1.5rem;
+    }
+    
+    .skill-card h5 {
+        font-size: 0.8rem;
+    }
+}
