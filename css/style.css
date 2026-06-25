@@ -1765,3 +1765,250 @@ body.dark-mode .testimonial-stats {
         font-size: 1.8rem;
     }
 }
+
+/* ============================================
+Portfolio Page Styles
+   ============================================ */
+
+/* Filter Bar */
+.filter-bar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--body-font);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+/* Project Card */
+.project-card {
+    background: var(--light-color);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-color);
+}
+
+.card-img-placeholder {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--primary-color);
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(6, 182, 212, 0.05));
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-body {
+    padding: 1.25rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card-category {
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.card-title {
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.card-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+    flex: 1;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.tech-badge {
+    font-size: 0.7rem;
+    padding: 4px 12px;
+    border-radius: 50px;
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--primary-color);
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    font-weight: 500;
+}
+
+.card-links {
+    display: flex;
+    gap: 16px;
+    padding: 0.75rem 1.25rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.card-link {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s ease;
+}
+
+.card-link:hover {
+    color: var(--primary-color);
+}
+
+.card-link i {
+    font-size: 1.1rem;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+    background: var(--text-muted);
+}
+
+.status-dot.live {
+    background: #3DD68C;
+}
+
+/* ============================================
+   Dark Mode - Portfolio
+   ============================================ */
+body.dark-mode .project-card {
+    background: #1E293B;
+    border-color: #334155;
+}
+
+body.dark-mode .project-card:hover {
+    border-color: #3B82F6;
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.08);
+}
+
+body.dark-mode .card-title {
+    color: #F1F5F9;
+}
+
+body.dark-mode .card-desc {
+    color: #94A3B8;
+}
+
+body.dark-mode .tech-badge {
+    background: rgba(59, 130, 246, 0.12);
+    color: #60A5FA;
+    border-color: rgba(59, 130, 246, 0.15);
+}
+
+body.dark-mode .card-links {
+    border-top-color: #334155;
+}
+
+body.dark-mode .card-link {
+    color: #94A3B8;
+}
+
+body.dark-mode .card-link:hover {
+    color: #60A5FA;
+}
+
+body.dark-mode .card-img-placeholder {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(6, 182, 212, 0.05));
+    border-bottom-color: #334155;
+}
+
+body.dark-mode .filter-btn {
+    color: #94A3B8;
+    border-color: #334155;
+}
+
+body.dark-mode .filter-btn:hover,
+body.dark-mode .filter-btn.active {
+    background: #3B82F6;
+    border-color: #3B82F6;
+    color: #FFFFFF;
+}
+
+body.dark-mode .card-category {
+    color: #60A5FA;
+}
+
+/* ============================================
+   Responsive - Portfolio
+   ============================================ */
+@media (max-width: 767.98px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-btn {
+        font-size: 0.8rem;
+        padding: 6px 14px;
+    }
+    
+    .card-img-placeholder {
+        height: 120px;
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .filter-bar {
+        gap: 5px;
+    }
+    
+    .filter-btn {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+    }
+}
