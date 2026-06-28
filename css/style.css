@@ -2012,3 +2012,394 @@ body.dark-mode .card-category {
         padding: 4px 10px;
     }
 }
+/* ============================================
+   Blog Page Styles
+   ============================================ */
+
+/* Featured Post */
+.featured-post-section {
+    background: linear-gradient(180deg, rgba(37, 99, 235, 0.03) 0%, transparent 100%);
+}
+
+.featured-post-card {
+    background: var(--light-color);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.featured-post-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-color);
+}
+
+.featured-icon {
+    font-size: 5rem;
+    color: var(--primary-color);
+    background: rgba(37, 99, 235, 0.08);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.featured-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+.featured-badges .badge {
+    font-weight: 500;
+    padding: 0.4rem 0.9rem;
+    border-radius: 50px;
+}
+
+.featured-title {
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.featured-excerpt {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* Blog Cards */
+.blog-card {
+    background: var(--light-color);
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-color);
+}
+
+.blog-card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    padding: 1.5rem 1.5rem 0.5rem;
+    background: rgba(37, 99, 235, 0.03);
+}
+
+.blog-card-body {
+    padding: 1rem 1.5rem 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 0.8rem;
+}
+
+.blog-meta .badge {
+    font-weight: 500;
+    padding: 0.3rem 0.7rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+}
+
+.badge-hackathon { background: #F59E0B; color: #FFFFFF; }
+.badge-webdev { background: #06B6D4; color: #FFFFFF; }
+.badge-tutorial { background: #F59E0B; color: #FFFFFF; }
+.badge-mobile { background: #06B6D4; color: #FFFFFF; }
+.badge-dsa { background: #06B6D4; color: #FFFFFF; }
+.badge-career { background: #F59E0B; color: #FFFFFF; }
+.badge-opinion { background: #F59E0B; color: #FFFFFF; }
+.badge-readtime { background: rgba(37, 99, 235, 0.08); color: var(--text-muted); }
+
+.badge-readtime i {
+    font-size: 0.7rem;
+    margin-right: 3px;
+}
+
+.blog-card-title {
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.6rem;
+    line-height: 1.4;
+}
+
+.blog-card-excerpt {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.blog-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.blog-date {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.blog-date i {
+    margin-right: 4px;
+}
+
+.blog-read-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.blog-read-link:hover {
+    color: var(--primary-hover);
+    transform: translateX(5px);
+}
+
+.blog-read-link i {
+    transition: transform 0.3s ease;
+}
+
+.blog-read-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    padding: 4rem 0;
+    background: rgba(37, 99, 235, 0.03);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.newsletter-title {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.8rem;
+}
+
+.newsletter-subtitle {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 550px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.7;
+}
+
+.newsletter-form .input-group {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.newsletter-form .form-control {
+    padding: 0.8rem 1.2rem;
+    border-radius: 50px 0 0 50px;
+    border: 2px solid var(--border-color);
+    background: var(--light-color);
+    color: var(--text-color);
+}
+
+.newsletter-form .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}
+
+.newsletter-form .btn {
+    border-radius: 0 50px 50px 0;
+    padding: 0.8rem 1.8rem;
+}
+
+.newsletter-footnote {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* CTA Buttons */
+.cta-buttons .btn {
+    margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   Dark Mode - Blog
+   ============================================ */
+body.dark-mode .featured-post-card {
+    background: #1E293B;
+    border-color: #334155;
+}
+
+body.dark-mode .featured-post-card:hover {
+    border-color: #3B82F6;
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.08);
+}
+
+body.dark-mode .featured-title {
+    color: #F1F5F9;
+}
+
+body.dark-mode .featured-excerpt {
+    color: #94A3B8;
+}
+
+body.dark-mode .blog-card {
+    background: #1E293B;
+    border-color: #334155;
+}
+
+body.dark-mode .blog-card:hover {
+    border-color: #3B82F6;
+}
+
+body.dark-mode .blog-card-title {
+    color: #F1F5F9;
+}
+
+body.dark-mode .blog-card-excerpt {
+    color: #94A3B8;
+}
+
+body.dark-mode .blog-card-footer {
+    border-top-color: #334155;
+}
+
+body.dark-mode .blog-date {
+    color: #94A3B8;
+}
+
+body.dark-mode .badge-readtime {
+    background: rgba(59, 130, 246, 0.12);
+    color: #94A3B8;
+}
+
+body.dark-mode .newsletter-section {
+    background: rgba(59, 130, 246, 0.05);
+    border-color: #334155;
+}
+
+body.dark-mode .newsletter-title {
+    color: #F1F5F9;
+}
+
+body.dark-mode .newsletter-subtitle {
+    color: #94A3B8;
+}
+
+body.dark-mode .newsletter-form .form-control {
+    background: #1E293B;
+    border-color: #334155;
+    color: #F1F5F9;
+}
+
+body.dark-mode .newsletter-form .form-control:focus {
+    border-color: #3B82F6;
+}
+
+body.dark-mode .featured-icon {
+    background: rgba(59, 130, 246, 0.12);
+    color: #60A5FA;
+}
+
+/* ============================================
+   Responsive - Blog
+   ============================================ */
+@media (max-width: 991.98px) {
+    .featured-post-card {
+        padding: 1.5rem;
+    }
+    
+    .featured-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 3rem;
+    }
+    
+    .featured-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .featured-post-card {
+        text-align: center;
+        padding: 1.5rem;
+    }
+    
+    .featured-badges {
+        justify-content: center;
+    }
+    
+    .featured-title {
+        font-size: 1.3rem;
+    }
+    
+    .featured-excerpt {
+        font-size: 0.95rem;
+    }
+    
+    .blog-card {
+        margin-bottom: 0;
+    }
+    
+    .newsletter-title {
+        font-size: 1.5rem;
+    }
+    
+    .cta-buttons .btn {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .featured-post-card {
+        padding: 1rem;
+    }
+    
+    .featured-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .newsletter-form .input-group {
+        flex-direction: column;
+    }
+    
+    .newsletter-form .form-control {
+        border-radius: 50px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .newsletter-form .btn {
+        border-radius: 50px;
+        width: 100%;
+    }
+}
