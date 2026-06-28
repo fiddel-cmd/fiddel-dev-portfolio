@@ -903,17 +903,6 @@ body.dark-mode .contact-social a {
 }
 
 /* About Image Placeholder */
-/* .about-image-placeholder {
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(6, 182, 212, 0.1));
-    border-radius: 1rem;
-    padding: 4rem 2rem;
-    text-align: center;
-    position: relative;
-    min-height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
  .about-image-placeholder {
     position: relative;
     border-radius: 1rem;
@@ -1559,7 +1548,7 @@ body.dark-mode .cta-section .btn-primary:hover {
     }
 }
 /* ============================================
-   Testimonials Page Styles
+   Testimonials Page
    ============================================ */
 
 /* Testimonials Header */
@@ -1582,10 +1571,10 @@ body.dark-mode .cta-section .btn-primary:hover {
 
 /* Testimonial Cards */
 .testimonial-card {
-    background: var(--light-color);
+    background: #FFFFFF;
     padding: 2rem;
     border-radius: 1rem;
-    border: 1px solid var(--border-color);
+    border: 1px solid #E2E8F0;
     transition: all 0.3s ease;
     height: 100%;
     display: flex;
@@ -1608,8 +1597,9 @@ body.dark-mode .cta-section .btn-primary:hover {
     margin-right: 2px;
 }
 
+/* ✅ FIX: Testimonial text - visible in light mode */
 .testimonial-text {
-    color: var(--text-color);
+    color: #1E293B !important;
     font-size: 1rem;
     line-height: 1.8;
     flex-grow: 1;
@@ -1638,7 +1628,7 @@ body.dark-mode .cta-section .btn-primary:hover {
     align-items: center;
     gap: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid #E2E8F0;
 }
 
 .client-avatar {
@@ -1650,16 +1640,17 @@ body.dark-mode .cta-section .btn-primary:hover {
     display: block;
 }
 
+/* ✅ FIX: Client info - visible in light mode */
 .client-info h5 {
     font-family: var(--heading-font);
     font-weight: 600;
-    color: var(--text-color);
+    color: #0F172A !important;
     margin-bottom: 0.1rem;
     font-size: 1rem;
 }
 
 .client-info span {
-    color: var(--text-muted);
+    color: #64748B !important;
     font-size: 0.85rem;
 }
 
@@ -1710,7 +1701,7 @@ body.dark-mode .testimonial-card:hover {
 }
 
 body.dark-mode .testimonial-text {
-    color: #E2E8F0;
+    color: #E2E8F0 !important;
 }
 
 body.dark-mode .testimonial-client {
@@ -1718,11 +1709,11 @@ body.dark-mode .testimonial-client {
 }
 
 body.dark-mode .client-info h5 {
-    color: #F1F5F9;
+    color: #F1F5F9 !important;
 }
 
 body.dark-mode .client-info span {
-    color: #94A3B8;
+    color: #94A3B8 !important;
 }
 
 body.dark-mode .testimonial-stats {
@@ -1780,7 +1771,6 @@ body.dark-mode .testimonial-stats {
         font-size: 1.8rem;
     }
 }
-
 /* ============================================
 Portfolio Page Styles
    ============================================ */
