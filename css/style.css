@@ -861,7 +861,7 @@ body.dark-mode .contact-social a {
         padding: 1.5rem;
     }
 }
-/* About Page Styles */
+
 /* ============================================
    About Page Styles
    ============================================ */
@@ -903,7 +903,7 @@ body.dark-mode .contact-social a {
 }
 
 /* About Image Placeholder */
-.about-image-placeholder {
+/* .about-image-placeholder {
     background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(6, 182, 212, 0.1));
     border-radius: 1rem;
     padding: 4rem 2rem;
@@ -913,6 +913,21 @@ body.dark-mode .contact-social a {
     display: flex;
     align-items: center;
     justify-content: center;
+} */
+ .about-image-placeholder {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.about-image-placeholder img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    border-radius: 1rem;
+    transition: transform 0.5s ease;
 }
 
 .floating-badge {
@@ -2327,7 +2342,7 @@ body.dark-mode .featured-icon {
 }
 
 /* ============================================
-   Responsive - Blog
+Responsive - Blog
    ============================================ */
 @media (max-width: 991.98px) {
     .featured-post-card {
