@@ -15,7 +15,12 @@ export default function Navbar() {
             </li>
           </ul>
           <ThemeToggle />
-          <a className="contact-link" href="mailto:Fiddel.owuor@strathmore.edu">
+          <a
+            className="contact-link"
+            href="https://www.linkedin.com/in/fiddel-owuor-9511b9367/"
+            target="_blank"
+            rel="noreferrer"
+          >
             Contact me
           </a>
         </div>
