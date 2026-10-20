@@ -1,23 +1,27 @@
-# Fiddel Dev Portfolio
+# Fidel Dev Portfolio
 
-Personal portfolio and freelance services site. The root page is being migrated
-to React with Vite; the remaining pages are still served as their original HTML.
+Portfolio for Fidel, a BBIT student at Strathmore University. This project is
+being migrated in confirmed phases to Next.js App Router, TypeScript, and static
+export.
 
-## Getting started
+## Development
 
-Requirements: Node.js 20.19+ or 22.12+.
+Requirements: Node.js 20.9 or later.
 
 ```sh
 npm install
 npm run dev
 ```
 
-To create and preview a production build:
+Create a static production export in `out/`:
 
 ```sh
 npm run build
-npm run preview
 ```
 
-The React entry point is `src/main.jsx`; reusable page sections live in
-`src/components/`. Existing CSS remains in `css/style.css`.
+Deploy the contents of `out/` to a static host such as Vercel or Netlify.
+
+## Migration status
+
+- Phase 1: App Router scaffold, design tokens, shared navigation, footer, and theme toggle.
+- The original HTML, CSS, and JavaScript files remain in the repository as migration references. They are not part of the Next.js export.
