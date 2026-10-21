@@ -1,20 +1,14 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
+import { projects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: "Fidel Dev | Full-Stack Developer",
   description:
     "Fidel is a second-year BBIT student at Strathmore University who builds full-stack web and mobile apps end to end.",
 };
-
-const featuredProjects = [
-  "CityFix",
-  "AquaSense",
-  "APUSH Research & Care Services",
-  "Chama Manager",
-  "Hotel Reservation System",
-];
 
 export default function HomePage() {
   return (
@@ -71,22 +65,33 @@ export default function HomePage() {
             eyebrow="SELECTED WORK"
             id="work-title"
             title="Projects, with the details that matter."
-            description="Each case study will cover the problem, my role, the stack, and one decision I made along the way."
+            description="A selection of web, mobile, and desktop projects, with a quick look at what they do and the tools behind them."
           />
 
           <div className="project-preview-grid">
-            {featuredProjects.map((project, index) => (
-              <article className="project-preview" key={project}>
+            {projects.slice(0, 3).map((project, index) => (
+              <article className="project-preview" key={project.slug}>
                 <p className="project-index">
                   PROJECT {String(index + 1).padStart(2, "0")}
                 </p>
-                <h3>{project}</h3>
-                <p className="project-todo">
-                  [TODO: my content — project summary]
-                </p>
-                <p className="project-todo">[TODO: my content — stack]</p>
+                <h3>{project.name}</h3>
+                <p className="project-category">{project.category}</p>
+                <p className="project-summary">{project.summary}</p>
+                <ul className="project-tags" aria-label={`${project.name} technologies`}>
+                  {project.stack.map((technology) => (
+                    <li key={technology}>{technology}</li>
+                  ))}
+                </ul>
+                <Link className="project-preview-link" href={`/portfolio#${project.slug}`}>
+                  View project details <span aria-hidden="true">→</span>
+                </Link>
               </article>
             ))}
+          </div>
+          <div className="portfolio-action">
+            <Button href="/portfolio">
+              Explore all projects <span aria-hidden="true">→</span>
+            </Button>
           </div>
         </div>
       </section>

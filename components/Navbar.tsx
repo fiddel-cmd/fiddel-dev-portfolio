@@ -13,6 +13,9 @@ export default function Navbar() {
             <li>
               <Link href="/">Home</Link>
             </li>
+            <li>
+              <Link href="/portfolio">Portfolio</Link>
+            </li>
           </ul>
           <ThemeToggle />
           <a

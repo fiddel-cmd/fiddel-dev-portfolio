@@ -24,4 +24,5 @@ Deploy the contents of `out/` to a static host such as Vercel or Netlify.
 ## Migration status
 
 - Phase 1: App Router scaffold, design tokens, shared navigation, footer, and theme toggle.
+- Phase 3: Added a project portfolio page and linked featured project summaries from the homepage.
 - The original HTML, CSS, and JavaScript files remain in the repository as migration references. They are not part of the Next.js export.
