@@ -273,11 +273,63 @@ a:hover {
 }
 
 .current-work {
-  align-self: end;
+  max-width: 38rem;
+  margin-top: 2.5rem;
   padding: 1.5rem;
   border: 1px solid rgb(210 225 235 / 28%);
   border-radius: 0.6rem;
   background: rgb(255 255 255 / 5%);
+}
+
+.hero-portrait {
+  position: relative;
+  width: min(100%, 29rem);
+  aspect-ratio: 4 / 5;
+  justify-self: center;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid rgb(210 225 235 / 24%);
+  border-radius: 0.8rem;
+  background: #10283b;
+  box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 22%);
+}
+
+.hero-portrait::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: 42%;
+  background: linear-gradient(transparent, rgb(8 27 43 / 82%));
+  content: "";
+  pointer-events: none;
+}
+
+.hero-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 39% center;
+}
+
+.hero-portrait figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 1.25rem;
+  bottom: 1.15rem;
+  left: 1.25rem;
+  display: grid;
+  gap: 0.15rem;
+  color: #f3f8fc;
+}
+
+.hero-portrait figcaption span:first-child {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.hero-portrait figcaption span:last-child {
+  color: #d2e1eb;
+  font-size: 0.85rem;
 }
 
 .current-work-label,
@@ -607,6 +659,19 @@ a:hover {
 }
 
 @media (max-width: 40rem) {
+  .hero-grid {
+    gap: 2rem;
+  }
+
+  .hero-portrait {
+    width: min(100%, 23rem);
+  }
+
+  .current-work {
+    margin-top: 2rem;
+    padding: 1.25rem;
+  }
+
   .nav-inner {
     flex-wrap: wrap;
     padding-block: 0.75rem;
@@ -638,9 +703,13 @@ a:hover {
 
 @media (min-width: 64rem) {
   .hero-grid {
-    grid-template-columns: minmax(0, 1.5fr) minmax(17rem, 0.8fr);
+    grid-template-columns: minmax(0, 1.25fr) minmax(19rem, 0.75fr);
     align-items: center;
     gap: clamp(3rem, 7vw, 7rem);
+  }
+
+  .hero-portrait {
+    justify-self: end;
   }
 }
 

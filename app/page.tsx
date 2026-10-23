@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
 import { projects } from "@/lib/projects";
+import portrait from "../Images/DSC_0680.jpg";
 
 export const metadata: Metadata = {
   title: "Fidel Dev | Full-Stack Developer",
@@ -38,20 +40,34 @@ export default function HomePage() {
                 <span aria-hidden="true">↗</span>
               </Button>
             </div>
+
+            <aside className="current-work" aria-label="Current work">
+              <p className="current-work-label">
+                <span className="status-indicator" aria-hidden="true"></span>
+                CURRENT WORK
+              </p>
+              <h2>Systems that work in the real world.</h2>
+              <p>
+                Working with Strathmore ICT Services on a live biometric
+                attendance rollout.
+              </p>
+              <span className="current-work-context">Nairobi, Kenya</span>
+            </aside>
           </div>
 
-          <aside className="current-work" aria-label="Current work">
-            <p className="current-work-label">
-              <span className="status-indicator" aria-hidden="true"></span>
-              CURRENT WORK
-            </p>
-            <h2>Systems that work in the real world.</h2>
-            <p>
-              Working with Strathmore ICT Services on a live biometric
-              attendance rollout.
-            </p>
-            <span className="current-work-context">Nairobi, Kenya</span>
-          </aside>
+          <figure className="hero-portrait">
+            <Image
+              src={portrait}
+              alt="Fidel Owuor at Strathmore University"
+              unoptimized
+              priority
+              sizes="(max-width: 40rem) 100vw, (max-width: 64rem) 70vw, 38vw"
+            />
+            <figcaption>
+              <span>Fidel Owuor</span>
+              <span>Developer · Nairobi, Kenya</span>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
