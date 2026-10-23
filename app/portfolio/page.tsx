@@ -46,16 +46,21 @@ export default function PortfolioPage() {
                   <li key={technology}>{technology}</li>
                 ))}
               </ul>
-              {project.repository && (
-                <a
-                  className="project-repository"
-                  href={project.repository}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  View source on GitHub <span aria-hidden="true">↗</span>
-                </a>
-              )}
+              <div className="project-card-actions">
+                <Link className="project-link" href={`/portfolio/${project.slug}`}>
+                  Read case study <span aria-hidden="true">→</span>
+                </Link>
+                {project.repository && (
+                  <a
+                    className="project-repository"
+                    href={project.repository}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    View source on GitHub <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+              </div>
             </article>
           ))}
         </div>

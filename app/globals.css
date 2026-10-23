@@ -408,6 +408,7 @@ a:hover {
 }
 
 .project-preview-link,
+.project-link,
 .project-repository {
   display: inline-flex;
   align-items: center;
@@ -415,6 +416,18 @@ a:hover {
   margin-top: 1.25rem;
   font-weight: 700;
   text-decoration: none;
+}
+
+.project-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+.project-card-actions .project-repository,
+.project-card-actions .project-link {
+  margin-top: 1.25rem;
 }
 
 .portfolio-action {
@@ -479,6 +492,90 @@ a:hover {
 
 .portfolio-card .project-repository {
   margin-top: 1.5rem;
+}
+
+.case-study-hero {
+  padding-block: clamp(4rem, 8vw, 6rem) 2rem;
+  background:
+    radial-gradient(ellipse at 88% 18%, rgb(0 212 232 / 13%), transparent 34%),
+    var(--color-navy);
+  color: #f3f8fc;
+}
+
+.case-study-intro {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.case-study-topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.back-link {
+  color: #d2e1eb;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.case-study-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgb(210 225 235 / 28%);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 5%);
+  color: var(--color-cyan);
+}
+
+.case-study-hero h1 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  letter-spacing: -0.06em;
+  line-height: 1.04;
+}
+
+.case-study-summary {
+  max-width: 46rem;
+  margin: 0;
+  color: #d2e1eb;
+  font-size: 1.1rem;
+}
+
+.case-study .project-tags {
+  margin-top: 0;
+}
+
+.case-study-body {
+  max-width: 60rem;
+}
+
+.case-study-section {
+  margin-bottom: 2.5rem;
+}
+
+.case-study-section h2 {
+  margin: 0 0 1rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+
+.case-study-section p,
+.case-study-section li {
+  color: var(--color-muted);
+  font-size: 1.02rem;
+}
+
+.case-study-list {
+  margin: 1rem 0 0;
+  padding-left: 1.25rem;
 }
 
 .site-footer {
