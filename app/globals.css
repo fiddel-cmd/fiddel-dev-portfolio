@@ -555,9 +555,8 @@ a:hover {
   gap: 1.25rem;
 }
 
-.cityfix-visual-grid-two,
-.cityfix-visual-grid-three {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 23rem), 1fr));
+.cityfix-visual-grid-single {
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .cityfix-visual-card {
