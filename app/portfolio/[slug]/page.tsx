@@ -104,19 +104,25 @@ export default async function ProjectDetailPage({
           <div className="container">
             <div className="section-intro">
               <p className="eyebrow">VISUAL DIRECTION</p>
-              <h2 id="cityfix-visual-title">Two strong directions for the CityFix case study.</h2>
+              <h2 id="cityfix-visual-title">Three directions for the CityFix case study.</h2>
             </div>
 
-            <div className="cityfix-visual-grid cityfix-visual-grid-two">
-              {cityFixVariants.slice(0, 2).map((variant, index) => (
+            <div className="cityfix-visual-grid cityfix-visual-grid-three">
+              {cityFixVariants.map((variant, index) => (
                 <figure
-                  className={`cityfix-visual-card ${index === 0 ? "cityfix-visual-card-featured" : "cityfix-visual-card-alt"}`}
+                  className={`cityfix-visual-card ${index === 0 ? "cityfix-visual-card-featured" : index === 1 ? "cityfix-visual-card-alt" : "cityfix-visual-card-compact"}`}
                   key={variant.title}
                 >
                   <img src={variant.image} alt={variant.alt} />
                   <figcaption>
                     <span>{variant.title}</span>
-                    <strong>{index === 0 ? "Best fit for the case study" : "Alternative market angle"}</strong>
+                    <strong>
+                      {index === 0
+                        ? "Best fit for the case study"
+                        : index === 1
+                          ? "Alternative market angle"
+                          : "Operations-focused concept"}
+                    </strong>
                     <p>{variant.description}</p>
                   </figcaption>
                 </figure>
