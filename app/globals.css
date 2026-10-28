@@ -555,6 +555,10 @@ a:hover {
   gap: 1.25rem;
 }
 
+.cityfix-visual-grid-two {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 23rem), 1fr));
+}
+
 .cityfix-visual-card {
   position: relative;
   overflow: hidden;
@@ -601,6 +605,14 @@ a:hover {
   margin: 0;
   max-width: 28rem;
   color: #d2e1eb;
+}
+
+.cityfix-visual-card-alt {
+  filter: saturate(0.9) contrast(1.05);
+}
+
+.cityfix-visual-card-alt figcaption {
+  background: linear-gradient(transparent, rgb(12 33 48 / 88%));
 }
 
 .case-study-hero {
